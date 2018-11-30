@@ -1,12 +1,6 @@
 var buttonElement = document.getElementById("button1");
 
-window.onload = start;
 
-function start() {
-    setup();
-    // town();
-    wakeUp();
-}
 
 function story(text) {
     var currentStoryElement = document.getElementById("currentStory");

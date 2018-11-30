@@ -1,5 +1,11 @@
 /* This is a starter with examples.  Remove the examples once you have made your own versions. */
+window.onload = start;
 
+function start() {
+    setup();
+    // town();
+    wakeUp();
+}
 // core variables
 var messages = []; // for a sequence of messages
 var choices = [];
