@@ -31,6 +31,12 @@ function checkAnswers(answer) {  // Function names match story scenes. Replace w
 	else if (answer == "dust off") {
         dustOff();
     }
+	else if (answer == "go to police") {
+        goToPolice();
+    }
+		else if (answer == "wait") {
+        Wait();
+    }
 }
 
 function wakeUp(){  // FIRST STORY SCENE - WELCOMES PLAYER
@@ -64,6 +70,16 @@ function followTicking() {  // HOW TO SET A SCENE
   function dustOff() {  // HOW TO SET A SCENE
     story("You dust yourself off and after taking a few seconds to realize what just happened you try to figure out what just happened, yet it’s kind of hard to figure who or what just blew your house up cause, oh I don’t know, it blew up and nothing is left!");
 	choices = ["go to police"];
+	answer = setOptions(choices);
+ }
+ function goToPolice() {  // HOW TO SET A SCENE
+    story("You go to the police to report what happened, and in typical movie police fashion, they’re all out of the office eating doughnuts, well that’s a fine how do ya do ain’t it?");
+	choices = ["wait"];
+	answer = setOptions(choices);
+ }
+  function Wait() {  // HOW TO SET A SCENE
+   story("You wait for the police to show up for half an hour with no luck, instead three morons show up, you tell them what happened which only ends up resulting in a chorus of slaps, hits and jabs, well that went well, not!");
+	choices = ["give up", "wait more"];
 	answer = setOptions(choices);
  }
  
