@@ -22,6 +22,15 @@ function checkAnswers(answer) {  // Function names match story scenes. Replace w
     else if (answer == "get ready to go") {
         startYourDay();
     }
+	else if (answer == "follow ticking") {
+        followTicking();
+    }
+	else if (answer == "run away") {
+        runAway();
+    }
+	else if (answer == "dust off") {
+        dustOff();
+    }
 }
 
 function wakeUp(){  // FIRST STORY SCENE - WELCOMES PLAYER
@@ -43,4 +52,18 @@ function startYourDay() {  // HOW TO SET A SCENE
  }
 function followTicking() {  // HOW TO SET A SCENE
     story("Well, this has bad news written all over it I mean why would you follow a ticking noise? What are you stupid? Your house explodes, times up your dead, how’d that plan turn out for ya dummy!? ending");
+	choices = ["dummy you're dead no choice for you!"];
+	answer = setOptions(choices)
  }
+ 
+ function runAway() {  // HOW TO SET A SCENE
+    story("Well, at least you know not to tempt oh i don't know, being blown up! Your house explodes and you survived");
+	choices = ["dust off"];
+	answer = setOptions(choices);
+ }
+  function dustOff() {  // HOW TO SET A SCENE
+    story("You dust yourself off and after taking a few seconds to realize what just happened you try to figure out what just happened, yet it’s kind of hard to figure who or what just blew your house up cause, oh I don’t know, it blew up and nothing is left!");
+	choices = ["go to police"];
+	answer = setOptions(choices);
+ }
+ 
