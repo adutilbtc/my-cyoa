@@ -73,7 +73,7 @@ function followTicking() {  // HOW TO SET A SCENE
 	answer = setOptions(choices);
  }
  function goToPolice() {  // HOW TO SET A SCENE
-    story("You go to the police to report what happened, and in typical movie police fashion, they’re all out of the office eating doughnuts, well that’s a fine how do ya do ain’t it?");
+    story("You go to the police to report what happened, and in typical movie police fashion, they’re all out of the office eating donuts, well that’s a fine how do ya do ain’t it?");
 	choices = ["wait"];
 	answer = setOptions(choices);
  }
