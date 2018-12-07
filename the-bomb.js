@@ -37,12 +37,17 @@ function checkAnswers(answer) {  // Function names match story scenes. Replace w
 		else if (answer == "wait") {
         Wait();
     }
+		else if (answer == "give up") {
+       giveUp();
+    }
+		else if (answer == "wait more") {
+       waitMore();
+    }
 }
 
 function wakeUp(){  // FIRST STORY SCENE - WELCOMES PLAYER
-   var name = prompt("what is your name?");
    story("You wake up, nothing so far seems unusual");
-   choices = ["fall back asleep", "get ready to go", "  "];
+   choices = ["", "get ready to go", "  "];
    answer = setOptions(choices);
  }
    
@@ -57,6 +62,8 @@ function startYourDay() {  // HOW TO SET A SCENE
     answer = setOptions(choices);   
  }
 function followTicking() {  // HOW TO SET A SCENE
+var x = document.getElementById("myAudio"); 
+    x.play(); 
     story("Well, this has bad news written all over it I mean why would you follow a ticking noise? What are you stupid? Your house explodes, times up your dead, how’d that plan turn out for ya dummy!? ending");
 	choices = ["dummy you're dead no choice for you!"];
 	answer = setOptions(choices)
@@ -82,6 +89,16 @@ function followTicking() {  // HOW TO SET A SCENE
   function Wait() {  // HOW TO SET A SCENE
    story("You wait for the police to show up for half an hour with no luck, instead three morons show up, you tell them what happened which only ends up resulting in a chorus of slaps, hits and jabs, well that went well, not!");
 	choices = ["give up", "wait more"];
+	answer = setOptions(choices);
+ }
+  function giveUp() {  // HOW TO SET A SCENE
+   story("Well this was a waste of time, all anyone got out of it was three idiots hitting each other, i can’t blame you for giving up");
+	choices = ["go home", "go to hotel"];
+	answer = setOptions(choices);
+ }
+ function waitMore() {  // HOW TO SET A SCENE
+   story("Seriously? You’re just gonna wait and hope the police arrive? Well……..um…….ok i guess, you know what i give up suit yourself maybe things will turn out right for ya (end)");
+	choices = ["narrator got frustrated waiting for you, looks like your stuck here"];
 	answer = setOptions(choices);
  }
  
