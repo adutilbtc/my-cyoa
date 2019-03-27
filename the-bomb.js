@@ -1,5 +1,5 @@
 /* This is a starter with examples.  Remove the examples once you have made your own versions. */
-window.onload = start;
+scene1=wakeUp;
 
 function start() {
     setup();
